@@ -1,0 +1,29 @@
+.cartao {
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+  height: 30rem;
+}
+.cartao__side {
+  background-color: white;
+  height: 30rem;
+  transition: all 0.8s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  backface-visibility: hidden;
+}
+.cartao__side--front {
+  background-image: url(imgs/71jLBXtWJWL.jpg);
+  background-size: cover;
+}
+.cartao__side--back {
+  transform: rotateY(180deg);
+}
+.cartao:hover .cartao__side--front {
+  transform: rotateY(-180deg);
+}
+.cartao:hover .cartao__side--back {
+  transform: rotateY(0);
+}
